@@ -54,6 +54,35 @@ server.route({
   }
 })
 
+server.route({
+  method: 'PATCH',
+  path: '/todos/{id}',
+  handler: function (request, h) {
+    const payload = JSON.parse(request.payload)
+    const {
+      categoryId,
+      desc,
+      dueDate,
+      text,
+      done
+    } = payload;
+    const id = request.params.id;
+
+    const todo = todos.find(todo => todo.id === id);
+    const index = todos.indexOf(todo);
+    todos[index] = {
+      id,
+      categoryId,
+      desc,
+      dueDate,
+      text,
+      done
+    };
+
+    return todos[index];
+  }
+})
+
 // Start the server
 async function start() {
 
