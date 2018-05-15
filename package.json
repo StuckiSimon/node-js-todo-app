@@ -1,0 +1,22 @@
+{
+  "name": "js-todo-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StuckiSimon/node-js-todo-app.git"
+  },
+  "author": "Simon Stucki",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/StuckiSimon/node-js-todo-app/issues"
+  },
+  "homepage": "https://github.com/StuckiSimon/node-js-todo-app#readme",
+  "dependencies": {
+    "hapi": "^17.4.0"
+  }
+}
