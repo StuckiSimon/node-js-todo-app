@@ -13,3 +13,16 @@ This Node.js application runs on heroku.
 `heroku ps:scale web=0` to stop the application.
 
 The app runs on `https://node-js-todo-app.herokuapp.com/todos`
+
+## API
+
+### Data Structure
+Category: `{id, name}`
+
+Todo: `{id, text, categoryId, done}`
+### Endpoints
+`/categories`, GET only
+
+`/todos`, GET & POST
+
+`/todos/:id`, PATCH
