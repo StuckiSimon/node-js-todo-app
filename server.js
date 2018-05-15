@@ -11,10 +11,17 @@ const server = Hapi.server({
   port: PORT
 });
 
+const config = {
+  cors: {
+      origin: ['*']
+  }
+};
+
 // Add the route
 server.route({
   method: 'GET',
   path: '/categories',
+  config,
   handler: function (request, h) {
     return categories;
   }
@@ -23,6 +30,7 @@ server.route({
 server.route({
   method: 'GET',
   path: '/todos',
+  config,
   handler: function (request, h) {
     return todos
   }
@@ -31,6 +39,7 @@ server.route({
 server.route({
   method: 'POST',
   path: '/todos',
+  config,
   handler: function (request, h) {
     const payload = JSON.parse(request.payload)
     const {
@@ -57,6 +66,7 @@ server.route({
 server.route({
   method: 'PATCH',
   path: '/todos/{id}',
+  config,
   handler: function (request, h) {
     const payload = JSON.parse(request.payload)
     const {
