@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/StuckiSimon/node-js-todo-app#readme",
   "dependencies": {
-    "hapi": "^17.4.0"
+    "hapi": "^17.4.0",
+    "uuid": "^3.2.1"
   }
 }
